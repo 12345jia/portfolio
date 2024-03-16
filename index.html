@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="portfolio_style.css">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    </head>
+    <body>
+        <div class="first_container">
+            <div class="second_container">
+                <div class="block">
+                    <img src="picture.jpg" class="picture mx-auto ">
+                    <div class = "text_box mx-auto ">
+                        <div id = "text_intro" class = "mx-auto mt-3" ></div>
+                    </div>
+                    <div class = "icons mt-3 mx-auto">
+                        <a href="#rrr" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#rrr" target="_blank"><i class="fa-brands fa-github"></i></a>
+                        <a href="#rrr" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+    
+                       </div>
+                    
+                </div>
+               
+            </div>
+        </div>
+
+        <script>
+         var text = document.getElementById('text_intro');
+         var words_list = ['Loading....','Welcome.', "I'm Wajeeha Batool."];
+         var current_word_index = 0;
+         var current_letter_index =0;
+
+         function writing(){
+           var current_word = words_list[current_word_index];
+           text.textContent = current_word.substring(0,current_letter_index);
+
+           if(current_letter_index < current_word.length){
+            current_letter_index++;
+            setTimeout(writing,200);
+           }
+           else{
+
+            setTimeout(function(){
+                current_letter_index = 0;
+            current_word_index = (current_word_index+1)% words_list.length;
+            writing();
+            },1000)
+           }
+         }
+
+         writing();
+        </script>
+      
+    </body>
+</html>
