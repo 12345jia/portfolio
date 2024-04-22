@@ -1,0 +1,210 @@
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&display=swap");
+
+:root {
+    --color-body: #b6cbce;
+    --color-heading: #eef3db;
+    --color-base: #033f47;
+    --color-base2: #022a30;
+    --color-brand: #e0f780;
+    --color-brand2: #deff58;
+    --sidebar-width: 240px;
+    --font-base: "Bai Jamjuree";
+
+}
+
+body {
+    background-color: var(--color-base2);
+    color: var(--color-body);
+    font-family: var(--font-base), sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h4,
+h6 {
+    color: var(--color-heading);
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-body);
+    transition: all 0.4s ease;
+}
+
+a:hover {
+    color: var(--color-brand);
+}
+
+img {
+    width: 100%;
+}
+
+.text-brand {
+    color: var(--color-brand);
+}
+
+.full-height {
+    min-height: 100vh;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.mine_pic {
+    width: 180px;
+    height: 180px;
+    object-position: center;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+.navbar {
+    background-color: var(--color-base);
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    font-weight: 700;
+    text-transform: uppercase;
+    color :var(--color-heading);
+
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: var(--color-brand);
+}
+
+@media (min-width :992px) {
+    .navbar {
+        min-height: 100vh;
+        width: 240px;
+        background: linear-gradient(rgba(3, 65, 71, 0.8), rgba(3, 63, 71, 0.8)), url('../images/p1.jpg');
+        /*background-size: cover;*/
+        background-position: center;
+    }
+
+    .navbar-brand img {
+        border: 8px solid var(--color-brand);
+    }
+
+    #content-wrapper {
+        padding-left: var(--sidebar-width);
+    }
+}
+
+
+@media (max-width: 991px) {
+    .iconss {
+        display: flex;
+        justify-content: center;
+        
+        align-items: center;
+        
+    }
+
+    .nav-link {
+        margin-left: 15px;
+    }
+
+    .nav-link i {
+        font-size: 40px;
+        color: var(--color-heading);
+        
+    }
+
+   
+    .nav-link:hover i {
+        color: var(--color-brand);
+    }
+
+    .display-4 {
+        margin-top: 50px;  /* Adjust this value as needed */
+    }
+
+
+}
+
+.name{
+    color: var(--color-heading);
+}
+.btn {
+    padding: 12px 28px;
+    font-weight: 700;
+
+
+}
+
+.btn-brand {
+    background-color: var(--color-brand);
+    border-color: var(--color-brand);
+    color: var(--color-base);
+}
+
+.btn-brand :hover,
+.btn-brand:focus {
+    background-color: var(--color-brand2);
+    color: var(--color-base);
+    border-color: var(--color-brand2);
+}
+
+.link-custom {
+    font-weight: 700;
+    position: relative;
+
+}
+
+.link-custom:after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: var(--color-brand);
+    position: absolute;
+    left: 0;
+    top: 110%;
+    transition: all 0.4s;
+}
+
+.link-custom:hover::after {
+    width: 100%;
+    ;
+}
+
+/*skillss*/
+
+.progress {
+    background-color: #f8f9fa;
+   
+    border-radius: 10px;
+
+}
+
+.progress-bar.custom-progress-bar {
+    background-color: var(--color-brand);
+
+    transition: width 2s ease;
+}
+.bg-base{
+    background-color: var(--color-base);
+    border-radius: 10px;
+}
+.shadow-effect {
+    
+    transition: all 0.5s;
+} 
+.shadow-effect:hover{
+    box-shadow: -6px 6px 0 0 var(--color-brand);
+}
+.display-4{
+    min-height: 80px;
+}
+
+.mobile{
+    margin-top: 100px;
+}
